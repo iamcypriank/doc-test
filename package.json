@@ -3,12 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "react-router build",
-    "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc",
-    "tina": "tinacms dev -c \"react-router dev\""
-  },
+  "dev": "npm run tina:build && react-router dev",
+  "build": "npm run tina:build && react-router build",
+  "tina:build": "tinacms build",
+  "tina:dev": "tinacms dev" 
+}
+,
   "dependencies": {
     "@react-router/node": "^7.8.2",
     "@react-router/serve": "^7.8.2",
