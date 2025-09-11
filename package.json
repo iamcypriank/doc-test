@@ -6,7 +6,9 @@
   "dev": "npm run tina:build && react-router dev",
   "build": "npm run tina:build && react-router build",
   "tina:build": "tinacms build",
-  "tina:dev": "tinacms dev" 
+  "tina:dev": "tinacms dev" ,
+  "dev:local": "tinacms dev --no-datalayer"
+
 }
 ,
   "dependencies": {
