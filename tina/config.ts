@@ -21,7 +21,7 @@ export default defineConfig({
             name: "title",
             label: "Title",
             isTitle: true,
-            required: true, // ✅ required when using isTitle
+            required: true, 
           },
           {
             type: "rich-text",
