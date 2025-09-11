@@ -89,7 +89,6 @@ union DocumentNode = Docs | Folder
 
 type Docs implements Node & Document {
   title: String!
-  description: String
   body: JSON
   id: ID!
   _sys: SystemInfo!
@@ -111,7 +110,6 @@ input RichTextFilter {
 
 input DocsFilter {
   title: StringFilter
-  description: StringFilter
   body: RichTextFilter
 }
 
@@ -147,7 +145,6 @@ input DocumentMutation {
 
 input DocsMutation {
   title: String
-  description: String
   body: JSON
 }
 

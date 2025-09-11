@@ -168,7 +168,6 @@ export type DocumentNode = Docs | Folder;
 export type Docs = Node & Document & {
   __typename?: 'Docs';
   title: Scalars['String']['output'];
-  description?: Maybe<Scalars['String']['output']>;
   body?: Maybe<Scalars['JSON']['output']>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
@@ -190,7 +189,6 @@ export type RichTextFilter = {
 
 export type DocsFilter = {
   title?: InputMaybe<StringFilter>;
-  description?: InputMaybe<StringFilter>;
   body?: InputMaybe<RichTextFilter>;
 };
 
@@ -274,18 +272,17 @@ export type DocumentMutation = {
 
 export type DocsMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
-  description?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
-export type DocsPartsFragment = { __typename: 'Docs', title: string, description?: string | null, body?: any | null };
+export type DocsPartsFragment = { __typename: 'Docs', title: string, body?: any | null };
 
 export type DocsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type DocsQuery = { __typename?: 'Query', docs: { __typename: 'Docs', id: string, title: string, description?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type DocsQuery = { __typename?: 'Query', docs: { __typename: 'Docs', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type DocsConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -297,13 +294,12 @@ export type DocsConnectionQueryVariables = Exact<{
 }>;
 
 
-export type DocsConnectionQuery = { __typename?: 'Query', docsConnection: { __typename?: 'DocsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'DocsConnectionEdges', cursor: string, node?: { __typename: 'Docs', id: string, title: string, description?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type DocsConnectionQuery = { __typename?: 'Query', docsConnection: { __typename?: 'DocsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'DocsConnectionEdges', cursor: string, node?: { __typename: 'Docs', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export const DocsPartsFragmentDoc = gql`
     fragment DocsParts on Docs {
   __typename
   title
-  description
   body
 }
     `;
