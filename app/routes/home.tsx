@@ -15,7 +15,8 @@ export default function Home() {
     <HomeLayout {
       ...baseOptions()
       }>
-    
+
+        <h1>hello</h1>
     </HomeLayout>
   );
 }

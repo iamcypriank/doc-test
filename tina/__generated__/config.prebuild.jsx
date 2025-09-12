@@ -22,7 +22,6 @@ var config_default = defineConfig({
             label: "Title",
             isTitle: true,
             required: true
-            // ✅ required when using isTitle
           },
           {
             type: "rich-text",
