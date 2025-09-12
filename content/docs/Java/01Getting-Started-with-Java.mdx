@@ -1,0 +1,136 @@
+---
+title: Getting Started with Java
+---
+
+## What is Java?
+
+Java is a **general-purpose, object-oriented programming language** created by Sun Microsystems (now Oracle).\
+It is one of the most widely used languages for **web, desktop, and mobile applications**.
+
+Java is known for its motto: **“Write Once, Run Anywhere”** — meaning code compiled on one system can run on any other system with the Java Virtual Machine (JVM).
+
+***
+
+## Why Learn Java?
+
+* It powers **millions of applications** (banking systems, Android apps, enterprise software).
+* It’s **platform independent** (runs on Windows, macOS, Linux).
+* Huge ecosystem and community support.
+* In-demand skills for **jobs in backend, mobile, and enterprise development**.
+
+***
+
+## Key Features of Java
+
+* **Object-Oriented** – everything is structured around classes & objects.
+* **Platform Independent** – JVM allows the same program to run on multiple systems.
+* **Secure & Robust** – strong memory management and error handling.
+* **Multithreaded** – supports running tasks in parallel.
+* **Rich Libraries** – built-in APIs for networking, data, GUIs, etc.
+
+***
+
+## Getting Started with Java
+
+Follow these steps to set up Java and run your first program.
+
+<Steps>
+  <Step title="Install Java">
+    ## Why Install Java?
+
+    Java programs require the **Java Development Kit (JDK)**.\
+    The JDK includes tools to **compile** and **run** Java code.
+
+    ## Installation Commands
+
+    ```bash
+    # macOS (Homebrew)
+    brew install openjdk
+
+    # Ubuntu/Debian
+    sudo apt update
+    sudo apt install openjdk-17-jdk
+
+    # Windows (winget)
+    winget install Microsoft.OpenJDK.17
+    ```
+
+    ## Verify Installation
+
+    Run this command to confirm:
+
+    ```bash
+    java -version
+    ```
+
+    You should see your installed version of Java.
+  </Step>
+
+  <Step title="Write Your First Program">
+    ## Create the File
+
+    Open your editor and create a file named **`HelloWorld.java`**.
+
+    ## Add the Code
+
+    ```java
+    public class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello, Java!");
+        }
+    }
+    ```
+
+    ## Notes
+
+    * The filename must match the class name (`HelloWorld`).
+    * `System.out.println` prints text to the screen.
+  </Step>
+
+  <Step title="Compile Your Program">
+    ## What is Compilation?
+
+    Java code is not run directly — it is **compiled** into bytecode first.\
+    This makes it platform-independent.
+
+    ## Compile Command
+
+    ```bash
+    javac HelloWorld.java
+    ```
+
+    This creates a file called **`HelloWorld.class`**.
+
+    ## Check for Errors
+
+    If nothing is printed, it means the compilation was successful.
+  </Step>
+
+  <Step title="Run Your Program">
+    ## Execute the Program
+
+    Run the compiled class with:
+
+    ```bash
+    java HelloWorld
+    ```
+
+    (don’t add `.class` — just the class name).
+
+    ## Expected Output
+
+    ```
+    Hello, Java!
+    ```
+
+    ## What’s Next?
+
+    You’ve written, compiled, and run your first Java program!
+
+    Next steps:
+
+    * Try printing your name.
+    * Add simple math (e.g., `System.out.println(2 + 3)`).
+    * Explore **variables, loops, and conditions**.
+  </Step>
+</Steps>

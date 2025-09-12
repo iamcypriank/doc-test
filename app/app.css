@@ -1,3 +1,24 @@
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/vitepress.css';
 @import 'fumadocs-ui/css/preset.css';
+
+
+
+
+
+
+
+
+
+@layer base {
+    p{
+        @apply text-gray-500
+    }
+}
+
+
+@layer components{
+    .hero-btn{
+        @apply py-2 px-3 rounded-xl font-medium active:scale-95
+    }
+}

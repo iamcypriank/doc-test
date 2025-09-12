@@ -3,7 +3,7 @@ import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
-      title: 'Telusko',
+      title: <img className='h-[32px]' src="/logo.png" />,
     },
     links: [
       {

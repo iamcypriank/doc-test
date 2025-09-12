@@ -1,0 +1,151 @@
+---
+title: Getting Started with React
+---
+
+## What is React?
+
+React is a **JavaScript library** developed by Facebook for building **user interfaces**.\
+It focuses on building reusable components that make managing complex UIs simpler and more efficient.
+
+React is widely used in **web applications**, from small projects to large-scale enterprise apps.
+
+***
+
+## Why Learn React?
+
+* One of the most popular JavaScript libraries.
+* Backed by a huge community and companies like Meta.
+* Reusable **component-based architecture**.
+* Excellent performance with **virtual DOM**.
+* Works with libraries and frameworks like **Next.js** for production-ready apps.
+
+***
+
+## Key Features of React
+
+* **Component-Based** – build encapsulated components that manage their own state.
+* **Declarative Syntax** – describe UI and React updates it efficiently.
+* **Virtual DOM** – improves performance by minimizing direct DOM manipulation.
+* **Unidirectional Data Flow** – predictable data handling.
+* **Rich Ecosystem** – supports routing, state management, and server rendering.
+
+***
+
+## Getting Started with React
+
+Follow these steps to set up React and create your first app.
+
+<Steps>
+  <Step title="Install Node.js">
+    ## Why Install Node.js?
+
+    React requires **Node.js** and **npm (Node Package Manager)** to run development servers and manage dependencies.
+
+    ## Installation Commands
+
+    ```bash
+    # macOS (Homebrew)
+    brew install node
+
+    # Ubuntu/Debian
+    sudo apt update
+    sudo apt install nodejs npm
+
+    # Windows (winget)
+    winget install OpenJS.NodeJS
+    ```
+
+    ## Verify Installation
+
+    Run these commands to confirm:
+
+    ```bash
+    node -v
+    npm -v
+    ```
+  </Step>
+
+  <Step title="Create a React App">
+    ## Using Vite (recommended)
+
+    Create a new React project with:
+
+    ```bash
+    npm create vite@latest my-app
+    ```
+
+    Choose **React** (or **React + TypeScript**) when prompted.
+
+    Then install dependencies:
+
+    ```bash
+    cd my-app
+    npm install
+    ```
+
+    ## Alternative (Create React App)
+
+    ```bash
+    npx create-react-app my-app
+    cd my-app
+    npm start
+    ```
+  </Step>
+
+  <Step title="Run the Development Server">
+    Start the dev server with:
+
+    ```bash
+    npm run dev
+    ```
+
+    Open your browser at:
+
+    ```
+    http://localhost:5173
+    ```
+
+    You should see the default React app running.
+  </Step>
+
+  <Step title="Write Your First Component">
+    ## Create a Component
+
+    Inside `src/`, create a file **`Hello.jsx`**:
+
+    ```jsx
+    function Hello() {
+      return <h1>Hello, React!</h1>;
+    }
+
+    export default Hello;
+    ```
+
+    ## Use the Component
+
+    Update `src/App.jsx`:
+
+    ```jsx
+    import Hello from './Hello';
+
+    function App() {
+      return (
+        <div>
+          <Hello />
+        </div>
+      );
+    }
+
+    export default App;
+    ```
+
+    ## Run Again
+
+    Save the files and refresh the browser.\
+    You should see:
+
+    ```
+    Hello, React!
+    ```
+  </Step>
+</Steps>

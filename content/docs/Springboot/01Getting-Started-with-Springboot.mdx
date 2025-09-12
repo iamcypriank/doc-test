@@ -1,0 +1,128 @@
+---
+title: Getting Started with Springboot
+---
+
+## What is Spring Boot?
+
+Spring Boot is a **Java framework** that simplifies building production-ready applications.\
+It is built on top of the Spring Framework and provides tools to quickly set up web apps, APIs, and microservices with minimal configuration.
+
+***
+
+## Why Learn Spring Boot?
+
+* Widely used in enterprise and backend systems.
+* Reduces boilerplate with **auto-configuration**.
+* Integrated with Spring ecosystem (Spring MVC, Data, Security, etc.).
+* Production-ready features (logging, metrics, health checks).
+* Strong community and industry demand.
+
+***
+
+## Key Features of Spring Boot
+
+* **Auto Configuration** – eliminates manual setup for common tasks.
+* **Embedded Servers** – Tomcat/Jetty included, no need for external servers.
+* **Starter Dependencies** – preconfigured dependencies for rapid setup.
+* **Production Tools** – built-in monitoring and deployment support.
+* **Microservice Ready** – designed for modern distributed systems.
+
+***
+
+## Getting Started with Spring Boot
+
+Follow these steps to set up a Spring Boot project and run your first application.
+
+<Steps>
+  <Step title="Install Java">
+    ## Requirement
+
+    Spring Boot requires Java (JDK 17 or later recommended).\
+    Verify Java installation:
+
+    ```bash
+    java -version
+    ```
+
+    If not installed, follow the Java setup instructions first.
+  </Step>
+
+  <Step title="Create a Project">
+    ## Using Spring Initializr (Web UI)
+
+    Go to [https://start.spring.io](https://start.spring.io).
+
+    * Select **Project**: Maven
+    * Select **Language**: Java
+    * Choose **Spring Boot Version**: Stable latest
+    * Add Dependencies: **Spring Web**
+    * Click **Generate** to download the project.
+
+    Extract the ZIP file and open it in your IDE (IntelliJ, VS Code, or Eclipse).
+
+    ## Using CLI (Optional)
+
+    ```bash
+    curl https://start.spring.io/starter.zip \
+      -d dependencies=web \
+      -d name=demo \
+      -o demo.zip
+    unzip demo.zip -d demo
+    ```
+  </Step>
+
+  <Step title="Run the Application">
+    Inside the project folder, run:
+
+    ```bash
+    ./mvnw spring-boot:run
+    ```
+
+    or if using Gradle:
+
+    ```bash
+    ./gradlew bootRun
+    ```
+
+    Open your browser at:
+
+    ```
+    http://localhost:8080
+    ```
+  </Step>
+
+  <Step title="Write Your First Controller">
+    ## Create a Controller
+
+    In `src/main/java/com/example/demo/`, create `HelloController.java`:
+
+    ```java
+    package com.example.demo;
+
+    import org.springframework.web.bind.annotation.GetMapping;
+    import org.springframework.web.bind.annotation.RestController;
+
+    @RestController
+    public class HelloController {
+        @GetMapping("/")
+        public String hello() {
+            return "Hello, Spring Boot!";
+        }
+    }
+    ```
+
+    ## Restart and Test
+
+    Run the app again and open:
+
+    ```
+    http://localhost:8080/
+    ```
+
+    You should see:
+
+    ```
+    Hello, Spring Boot!
+    ```
+  </Step>
+</Steps>
